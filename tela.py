@@ -83,6 +83,10 @@ def criar_aba2(notebook,responder_pergunta):
         resposta_text.insert('1.0',reposta)
     ok_button = tk.Button(tab2,text="OK", command=executar)
     ok_button.grid(row=4,column=0,sticky='WE',padx=5,pady=5)
+    for i in range(5):
+        tab2.rowconfigure(i,weight=1)
+    
+    tab2.grid_columnconfigure(0,weight=1)
 
 def criar_tela(criar_pergunta, responder_pergunta):
     # Cria janela principal 
